@@ -1,0 +1,9 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(51); //Borra cada vez antes de pintar
+  stroke(random(255),random(255),random(255));
+  line(random(width),random(height),random(width),random(height));
+}
