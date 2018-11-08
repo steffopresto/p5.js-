@@ -1,0 +1,22 @@
+var List = [];
+var i=0;
+
+function setup() {
+  createCanvas(400, 400);
+  
+  while(i<4){
+  	List.push(i+3);
+    i++;
+  }
+  
+  i=0;
+  
+  while(i<4){
+  	print(List[i]);
+    i++;
+  }
+}
+
+function draw() {
+  background(220);
+}
