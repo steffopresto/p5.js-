@@ -1,0 +1,19 @@
+function setup() {
+  createCanvas(200, 200);
+  stroke(255);
+  noLoop();
+}
+
+var y=100;
+
+function draw() {
+  background(0);
+  line(0,y,width,y);
+  line(0,y+1,width,y+1);
+  y--;
+  if(y<0)	y=height;
+}
+
+function mousePressed(){
+	loop();  
+}
