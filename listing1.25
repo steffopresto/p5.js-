@@ -1,0 +1,9 @@
+function setup() {
+  createCanvas(400, 400);
+  frameRate(4);
+}
+
+function draw() {
+  background(51);
+  line(0,random(height),90,random(height));
+}
