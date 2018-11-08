@@ -1,0 +1,12 @@
+var gray=0;
+function setup() {
+  createCanvas(100, 100);
+}
+
+function draw() {
+  background(gray);
+}
+
+function mousePressed(){
+	gray+=20;  
+}
