@@ -1,0 +1,27 @@
+function setup() {
+  createCanvas(200, 200);
+  background(255);
+  smooth();
+  line(0,0,200,0); //Draw borders of the image
+  line(0,0,0,200);
+  
+  applyMatrix();
+  fill(255,0,0);	//Red square
+  rotate(radians(30));
+  translate(70,70);
+  scale(2.0);
+  rect(0,0,20,20);
+  resetMatrix();
+  
+  applyMatrix();
+  fill(255);	//White square
+  translate(70,70);
+  rotate(radians(30));
+  scale(2.0);
+  rect(0,0,20,20);
+  resetMatrix();
+}
+
+function draw() {
+  
+}
