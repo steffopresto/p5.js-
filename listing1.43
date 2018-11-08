@@ -1,0 +1,14 @@
+var x=20;
+
+function setup() {
+  createCanvas(100, 100);
+  smooth();
+  strokeWeight(4);
+}
+
+function draw() {
+  background(204);
+  
+  if(keyIsPressed)	x++;
+  line(x,20,x-60,80);
+}
