@@ -1,0 +1,18 @@
+var cir_x=0;
+
+function setup() {
+ createCanvas(400, 400);  
+ noStroke(); 
+ fill(100,255,32);
+}
+
+function draw() { 
+  background(127);
+  
+  ellipse(cir_x,50,50,50);
+  
+  cir_x++;  
+  if(cir_x>=width){
+    cir_x=0;
+  }
+}
