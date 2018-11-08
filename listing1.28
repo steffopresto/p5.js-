@@ -1,0 +1,17 @@
+var radio=50;
+var cuenta=0;
+
+function setup() {
+  createCanvas(500, 500);
+	background(0);
+}
+
+
+function draw() {
+  background(0);
+  stroke(175,90);
+  fill(175,40);
+  print("Interaciones: " + cuenta);
+  ellipse(20+cuenta, height/2, radio, radio);
+  cuenta++
+}
