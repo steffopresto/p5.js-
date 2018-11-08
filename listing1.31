@@ -1,0 +1,15 @@
+var img;
+
+function preload() {
+  img = loadImage('lena.png');
+}
+
+function setup() {
+  createCanvas(600, 400);
+  
+}
+
+function draw() {
+  tint(mouseX/2);
+  image(img,random(10),random(10));
+}
