@@ -1,0 +1,29 @@
+var pos=0;
+var mov=5;
+
+var mySound;
+
+function preload() {
+	mySound = loadSound("bass.wav");
+}
+  
+function setup() {
+	createCanvas(200,200);
+}
+
+function draw(){
+	background(128);
+  
+  ellipse(pos,30,30,30);
+  
+  pos+=mov;
+  
+  if(pos>=400 || pos<=0){
+  	mov=-mov;
+    thread("Suena");
+  }
+}
+
+function Suena(){
+	mySound.play();  
+}
