@@ -1,0 +1,8 @@
+function setup(){
+    createCanvas(400,400);
+}
+
+function draw(){    //Esto es un bucle infinito
+    stroke(random(255),random(255),random(255));
+    line(random(width), random(height), random(width), random(height));
+}
