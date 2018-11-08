@@ -1,0 +1,26 @@
+var posX=0;
+var posY=50;
+var D=30;
+var ancho=20;
+var alto=50;
+var mov=5;
+
+function setup(){
+  createCanvas(400,400);  
+}
+
+function draw(){  
+  background(128);
+  ellipse(posX,posY,D,D);
+  
+  //Where we find the player
+  var jugx=width-50;
+  var jugy=mouseY-30;
+  rect(jugx,jugy,ancho,alto);
+  
+  posX=posX+mov;
+  
+  if (posX>=400 || posX<=0 || (mov>0 && jugy<=posY+D/2 && posY-D/2<=jugy+alto && jugx<=posX+D/2 && posX-D/2<=jugx+ancho)){
+    mov=-mov;
+  }
+}
