@@ -1,0 +1,29 @@
+var img = [];
+
+function preload(){
+  img[0]=loadImage("Cycle1.png");
+  img[1]=loadImage("Cycle2.png");
+  img[2]=loadImage("Cycle3.png");
+  img[3]=loadImage("Cycle4.png");
+  img[4]=loadImage("Cycle5.png");
+  img[5]=loadImage("Cycle6.png");
+}
+
+
+
+var frame=0;
+
+function setup(){
+  createCanvas(600,400);
+  frameRate(6);
+}
+
+function draw(){
+  background(128);
+  image(img[frame],0,0);
+  
+  frame++;
+  if (frame==6){
+    frame=0;
+  }
+}
