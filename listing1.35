@@ -1,0 +1,27 @@
+var cir_rap_x = 0;
+var cir_len_x = 0;
+
+function setup() {
+  createCanvas(400,400); 
+  noStroke();
+}
+
+function draw() {
+  background(27,177,245);
+  
+  fill(193,255,62);
+  ellipse(cir_len_x,50, 50, 50);
+  cir_len_x++;
+
+  fill(255,72,0);
+  ellipse(cir_rap_x,50, 50, 50);
+  cir_rap_x+=5;
+
+  
+  if(cir_len_x > 400) {
+    cir_len_x = 0;
+  }
+  if(cir_rap_x > 400) {
+    cir_rap_x = 0;
+  }
+}
