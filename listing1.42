@@ -1,0 +1,38 @@
+var cir_x = 300;
+var cir_y = 20;
+
+var mov_x = 2;
+var mov_y = -2;
+
+function setup() {
+  createCanvas(400, 200);
+  stroke(214,13,255);
+  strokeWeight(7);
+}
+function draw() {
+  background(33,234,115);
+  ellipse(cir_x, cir_y, 40, 40);
+  cir_x = cir_x + mov_x;
+  cir_y = cir_y + mov_y;
+  
+  if(cir_x > width) {
+    cir_x = width;
+    mov_x = -mov_x;
+    println("derecha");
+  }
+  if(cir_y > height) {
+    cir_y = height;
+    mov_y = -mov_y;
+    println("abajo");
+  }
+  if(cir_x < 0) {
+    cir_x = 0;
+    mov_x = -mov_x;
+    println("izquierda");
+  }
+  if(cir_y < 0) {
+    cir_y = 0;
+    mov_y = -mov_y;
+    println("arriba");
+  }
+}
