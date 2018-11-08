@@ -1,0 +1,25 @@
+var drawT=false;
+
+function setup() {
+  createCanvas(100, 100);
+  noStroke();
+}
+
+function draw() {
+  background(204);
+  
+  if(drawT){
+  	rect(20,20,60,20);
+    rect(39,40,22,45);
+  }
+}
+
+function keyPressed(){
+	if((key=='T') || (key== 't')){
+  	drawT=true;  
+  }
+}
+
+function keyReleased(){
+	drawT=false;  
+}
