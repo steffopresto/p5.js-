@@ -1,0 +1,13 @@
+function setup() {
+  createCanvas(200,200);
+  background(128,128,128);
+  noStroke();
+  fill(0);
+  
+  //Carga una fuente en particular
+  textFont("Georgia",24);
+  textAlign(CENTER,CENTER);
+  
+  //Escribe en la ventana
+  text(" Hello World! ",100,100);
+}
