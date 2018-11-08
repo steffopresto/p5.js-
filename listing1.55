@@ -1,0 +1,37 @@
+var grosor=1;
+var R=0, G=0, B=0;
+
+function setup() {
+  createCanvas(400, 400);
+  background(128);
+}
+
+function draw() {
+  if(mouseIsPressed)	point(mouseX,mouseY);
+  
+  if(keyIsPressed && keyCode==UP_ARROW){
+  	grosor++;
+    strokeWeight(grosor);
+  }
+  
+  if(keyIsPressed && keyCode==DOWN_ARROW){
+  	if(grosor>1)	grosor--;
+    strokeWeight(grosor);
+  }
+  
+  else{
+  	R=random(255);
+    G=random(255);
+    B=random(255);
+    
+  }
+  
+  //Muestra del pincel
+  
+  noStroke();
+  fill(128);
+  rect(4,4,grosor+2,grosor+2);
+  fill(R,G,B);
+  ellipse(5+grosor/2, 5+grosor/2, grosor, grosor);
+  stroke(R,G,B);
+}
