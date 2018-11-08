@@ -1,0 +1,37 @@
+var posX=0;
+var posY=50;
+var D=30;
+var ancho=20;
+var alto=50;
+var mov=5;
+var goles=0;
+var muestragol=0;
+
+function setup(){
+  createCanvas(400,400);  
+}
+
+function draw(){  
+  background(128);
+  ellipse(posX,posY,D,D);
+  
+  
+  var jugx=width-50;
+  var jugy=mouseY-30;
+  rect(jugx,jugy,ancho,alto);
+  
+  posX=posX+mov;
+  
+  if (posX>=400 || posX<=0 || (mov>0 && jugy<=posY+D/2 && posY-D/2<=jugy+alto && jugx<=posX+D/2 && posX-D/2<=jugx+ancho)){
+    mov=-mov;
+    if  (posX>=400){
+      goles=goles+1;
+      muestragol=40;
+    }
+  }
+  text("Goles "+goles, width/2-30, 20);
+  if (muestragol>0){
+    text("GOOOOL", width/2-30, height-50);
+    muestragol=muestragol-1;
+  }
+}
