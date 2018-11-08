@@ -1,0 +1,26 @@
+var dragX,dragY,moveX,moveY;
+
+function setup() {
+  createCanvas(100, 100);
+  smooth();
+  noStroke();
+}
+
+function draw() {
+  background(204);
+  fill(0);
+  ellipse(dragX,dragY,33,33);
+  fill(153);
+  ellipse(moveX,moveY,33,33);
+}
+
+
+function mouseMoved(){	//Move the gray
+	moveX=mouseX;
+  moveY=mouseY;
+}
+
+function mouseDragged(){	//Move the black
+	dragX=mouseX;
+  dragY=mouseY;
+}
