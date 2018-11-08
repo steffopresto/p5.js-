@@ -1,0 +1,18 @@
+var lista = ["Bananas","Coffee","Tuxedo"];	//String
+var numeros = [498,23,467,324];	//Int
+var floating = [23.454,65.345,8.45]; //Float
+var boolean = [true,false];	//Boolean
+
+
+function setup() {
+  createCanvas(400, 400);
+  
+  print(numeros[2]);
+  
+  var a= numeros[0]+numeros[3];
+  print(a);
+}
+
+function draw() {
+  background(220);
+}
