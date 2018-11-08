@@ -1,0 +1,9 @@
+function setup() {
+  createCanvas(100, 100);
+}
+
+function draw() {
+  background(0);
+  fill(255);
+  text(key,28,75);
+}
