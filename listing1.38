@@ -1,0 +1,16 @@
+var pos=0;
+var mov=1;
+
+function setup(){
+	createCanvas(400,400);
+}
+
+function draw(){
+	background(128);
+	ellipse(pos,50,30,30);
+	pos=pos+mov;	
+	
+	if(pos>=400 || pos<=0){
+		mov=-mov;
+	}
+}
